@@ -1,19 +1,12 @@
-"""
-main.py
-Main program with menu + file save/load
-"""
-
 import os
 from prompt_builder import get_user_input
 from formatter import format_prompt
 
-FOLDER_NAME = "prompts"
-
+FOLDER_NAME = "AI Ecosystem"
 
 def create_folder():
     if not os.path.exists(FOLDER_NAME):
         os.makedirs(FOLDER_NAME)
-
 
 def save_prompt(title, content):
     create_folder()
@@ -25,7 +18,6 @@ def save_prompt(title, content):
 
     print("Prompt saved successfully.")
 
-
 def load_prompt(title):
     file_path = os.path.join(FOLDER_NAME, title + ".txt")
 
@@ -35,7 +27,6 @@ def load_prompt(title):
 
     with open(file_path, "r") as file:
         return file.read()
-
 
 def list_prompts():
     create_folder()
@@ -49,8 +40,7 @@ def list_prompts():
     print("\nSaved Prompts:")
     for file in files:
         print("-", file.replace(".txt", ""))
-
-
+        
 def main():
 
     current_prompt = ""
@@ -119,7 +109,5 @@ def main():
 
         else:
             print("Invalid choice. Enter 1 to 6.")
-
-
 if __name__ == "__main__":
     main()
