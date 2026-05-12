@@ -1,10 +1,4 @@
-"""
-formatter.py
-Formats prompt into structured output
-"""
-
 def format_prompt(data):
-
     prompt = "TASK:\n"
     prompt += f"You are an AI assistant. {data['task']}\n\n"
 
