@@ -1,8 +1,3 @@
-"""
-prompt_builder.py
-Collects user input for building prompts
-"""
-
 def get_user_input():
     task = input("Describe the task: ").strip()
 
